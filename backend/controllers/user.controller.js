@@ -118,9 +118,9 @@ export const updateProfile = async (req, res) => {
     const file = req.file;
    
 
-    //cloudinary is comes here...
+    //cloudinary is comes here..
     let skillsArray;
-    if(skills)
+    if(skills) 
     {
       skillsArray = skills.spilt(",");
     }
@@ -134,12 +134,22 @@ export const updateProfile = async (req, res) => {
       });
     }
     //updating data
-    if(fullname) user.fullname = fullname
-    if(email) user.email = email
-    if(phoneNumber) user.phoneNumber = phoneNumber
-    if(bio) user.profile.bio = bio
-    if(skills) user.profile.skills = skillsArray
-
+    if(fullname) 
+    {
+      user.fullname = fullname
+    }
+    if(email){
+      user.email = email
+    } 
+    if(phoneNumber) {
+      user.phoneNumber = phoneNumber
+    }
+    if(bio) {
+      user.profile.bio = bio
+    }
+    if(skills) {
+      user.profile.skills = skillsArray
+    }
     //when we implement cloudnary then the resume bussiness logic comes here...
 
     await user.save();
