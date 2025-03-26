@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16 ">
         <div>
           <h1 className="text-2xl font-bold">
-            Job<span className="text-[#F83002]">Portal</span>
+            Job<span className="text-[#F83002]">Nest</span>
           </h1>
         </div>
         <div className="flex items-center gap-12">
@@ -25,7 +25,7 @@ const Navbar = () => {
           {!user ? (
             <div className="flex items-center gap-2">
                 <Link to="/login"><Button className="cursor-pointer" variant="outline">Login</Button></Link>
-                <Link to="/signup"><Button className="cursor-pointer bg-[#6A38C2] hover:bg-[#5b30a6] text-white " variant="outline">Signup</Button></Link>
+                <Link to="/signup"><Button className="cursor-pointer bg-[#6A38C2] hover:bg-[#5b30a6] text-white" variant="outline">Signup</Button></Link>
               
             </div>
           ) : (
