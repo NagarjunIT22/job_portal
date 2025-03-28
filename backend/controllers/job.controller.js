@@ -1,7 +1,6 @@
-
 import { Job } from "../models/job.model.js";
 
-// admin will post the jobs
+// admin post krega job
 export const postJob = async (req, res) => {
     try {
         const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
@@ -9,7 +8,7 @@ export const postJob = async (req, res) => {
 
         if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
             return res.status(400).json({
-                message: "Somethin is missing.",
+                message: "Somethig is missing.",
                 success: false
             })
         };
@@ -34,7 +33,7 @@ export const postJob = async (req, res) => {
         console.log(error);
     }
 }
-// student 
+// student k liye
 export const getAllJobs = async (req, res) => {
     try {
         const keyword = req.query.keyword || "";
@@ -79,7 +78,7 @@ export const getJobById = async (req, res) => {
         console.log(error);
     }
 }
-// How many Jobs created by admin
+// admin kitne job create kra hai abhi tk
 export const getAdminJobs = async (req, res) => {
     try {
         const adminId = req.id;
